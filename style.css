@@ -1,0 +1,147 @@
+/* Modern, clean style for Tech for Girls Registration - Muted Pastel Theme */
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: linear-gradient(135deg, #1d61c7 0%, hsl(214, 94%, 49%) 50%, hsl(269, 90%, 46%) 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  animation: gradientBG 8s ease-in-out infinite alternate;
+}
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+    background: linear-gradient(135deg, #045ce2 0%, #0867e4 50%, #7a0af1 100%);
+  }
+  100% {
+    background-position: 100% 50%;
+    background: linear-gradient(225deg, #0364f5 0%, #d70a7e 50%, #7514de 100%);
+  }
+}
+.container.glass {
+  max-width: 450px;
+  margin: 48px auto;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(180, 185, 210, 0.16), 0 1.5px 8px 0 rgba(180, 180, 200, 0.08);
+  background: rgba(245, 247, 250, 0.70);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1.5px solid rgba(220,220,240,0.22);
+  padding: 36px 32px 32px 32px;
+  animation: fadeIn 1s;
+  position: relative;
+  z-index: 2;
+}
+.lottie-3d {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+h1 {
+  text-align: center;
+  color: #3c4a7d;
+  margin-bottom: 28px;
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+.form-section {
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255,255,255,0.13);
+  border-radius: 14px;
+  box-shadow: 0 1.5px 6px 0 rgba(35, 35, 202, 0.06);
+  padding: 12px 14px 10px 14px;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.form-section:focus-within, .form-section:hover {
+  box-shadow: 0 3px 18px 0 rgba(110,127,220,0.12);
+  transform: translateY(-2px) scale(1.03);
+}
+label {
+  color: #3c4a7d;
+  font-weight: 600;
+  margin-bottom: 7px;
+  letter-spacing: 0.02em;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="file"] {
+  padding: 10px 12px;
+  border: 1.5px solid #c2c9e2;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f5f7fa;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  border: 1.5px solid #a5b4fc;
+  outline: none;
+  box-shadow: 0 0 0 2px #dbeafe;
+}
+button[type="button"],
+button[type="submit"] {
+  padding: 12px 0;
+  background: linear-gradient(90deg, #a5b4fc 0%, #fbcfe8 100%);
+  color: #4b5563;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 7px;
+  margin-bottom: 3px;
+  box-shadow: 0 2px 8px 0 rgba(160, 160, 180, 0.08);
+}
+button[type="button"]:hover,
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #818cf8 0%, #f9a8d4 100%);
+  color: #374151;
+  transform: translateY(-2px) scale(1.03);
+}
+#shareCounter {
+  margin-left: 12px;
+  color: #6e7fdc;
+  font-weight: 600;
+  font-size: 1rem;
+}
+#shareCompleteMsg {
+  margin-top: 8px;
+  color: #1fa463;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: opacity 0.3s;
+}
+.hidden {
+  display: none;
+}
+.success-msg {
+  text-align: center;
+  color: #1fa463;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 30px;
+  animation: fadeIn 1s;
+}
+input:disabled, button:disabled {
+  background: #e0eafc;
+  color: #a3a3a3;
+  cursor: not-allowed;
+}
+@media (max-width: 540px) {
+  .container {
+    padding: 18px 6vw 18px 6vw;
+    max-width: 98vw;
+  }
+  h1 {
+    font-size: 1.35rem;
+  }
+}

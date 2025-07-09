@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech for Girls Registration</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container glass">
+    <div class="lottie-3d">
+      <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_5ngs2ksb.json" background="transparent" speed="1" style="width: 120px; height: 120px; margin: 0 auto 24px auto;" loop autoplay></lottie-player>
+    </div>
+    <h1>Tech for Girls Registration</h1>
+    <form id="registrationForm">
+      <div class="form-section">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-section">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required />
+      </div>
+      <div class="form-section">
+        <label for="email">Email ID</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-section">
+        <label for="college">College/Department</label>
+        <input type="text" id="college" name="college" required />
+      </div>
+      <div class="form-section">
+        <label>Share on WhatsApp</label>
+        <button type="button" id="whatsappShareBtn">Share on WhatsApp</button>
+        <span id="shareCounter">Click count: 0/5</span>
+        <div id="shareCompleteMsg" class="hidden">Sharing complete. Please continue.</div>
+      </div>
+      <div class="form-section">
+        <label for="screenshot">Upload Screenshot</label>
+        <input type="file" id="screenshot" name="screenshot" accept="image/*,.pdf" required />
+      </div>
+      <button type="submit" id="submitBtn">Submit Registration</button>
+    </form>
+    <div id="successMsg" class="hidden success-msg">
+      🎉 Your submission has been recorded. Thanks for being part of Tech for Girls!
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
